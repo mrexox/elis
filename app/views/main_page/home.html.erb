@@ -1,42 +1,44 @@
 <% @active = :home %>
+<% if !@slides.blank? %>
+<div class="carousel-wrapper">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <% 1.upto(@slides.all.count-1) do |n| %>
+      <li data-target="#myCarousel" data-slide-to="<%= n%>"></li>
+      <% end %>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <%= link_to(image_tag(@slides.first.image_url.to_s), @slides.first.url)%>
+        <div class="carousel-caption">
+          <%=@slides.first.text%>
+        </div>
+      </div>
+      <% @slides.all[1..-1].each do |slide| %>
+      <div class="item">
+        <%= link_to(image_tag(slide.image_url.to_s), slide.url)%>
+        <div class="carousel-caption">
+          <%=slide.text%>
+        </div>
+      </div>
+      <% end %>
+    </div>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <% 1.upto(@slides.all.count-1) do |n| %>
-    <li data-target="#myCarousel" data-slide-to="<%= n%>"></li>
-    <% end %>
-  </ol>
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <%= link_to(image_tag(@slides.first.image_url.to_s), @slides.first.url)%>
-      <div class="carousel-caption">
-        <%=@slides.first.text%>
-      </div>
-    </div>
-    <% @slides.all[1..-1].each do |slide| %>
-    <div class="item">
-      <%= link_to(image_tag(slide.image_url.to_s), slide.url)%>
-      <div class="carousel-caption">
-        <%=slide.text%>
-      </div>
-    </div>
-    <% end %>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
-
+<% end %>
 <div class="container main">
 
 </div>

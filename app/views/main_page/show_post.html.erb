@@ -1,43 +1,42 @@
-<% @active = :blog %>
-    <div class="container-fluid">
-        <div class="row">
+f<% @active = :blog %>
+<div class="container-fluid">
+  <div class="row">
 
-            <div class="col col-xl-10 col-lg-9 col-md-9">
-              <%= image_tag(@post.image_url.to_s, :class => 'post-image') %>
-              <span class="date-show-post"><%= @post.created_at.to_formatted_s(:short)%></span>
-              <br>
-              <span class="text"><%= simple_format(@post.text) %></span>
-            </div>
-            <div class="col col-xl-2 col-lg-3 col-md-3">
-                <div class="right-side">
-                    <div class="face">
-                        <%=image_tag('face.jpg')%>
-                    </div>
-                    <hr class="dash">
-                    <center>
-                        <p align="middle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget pretium nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam neque libero, blandit sed diam laoreet, imperdiet pulvinar diam. Quisque
-                            dui
-                        </p>
-                    </center>
-                    <hr class="dash">
-
-                    <div class="icons">
-                        <div class="ico youtube"></div>
-                        <div class="ico pinterest"></div>
-                        <div class="ico instagram"></div>
-                        <div class="ico vk"></div>
-                        <div class="ico behance"></div>
-                      <!--  <div class="ico facebook"></div> -->
-                    </div>
-                    <hr class="dash">
-                    <div class="image-links">
-                        <%=image_tag('instagram-link.png')%>
-                            <%=image_tag('youtube-link.png')%>
-                    </div>
-                    <hr class="dash">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget pretium nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam neque libero, blandit sed diam laoreet, imperdiet pulvinar diam. Quisque dui
-                        purus, imperdiet at maximus vitae, malesuada eget justo. Duis id diam urna. Sed nec arcu id felis dapibus varius non ac odio. Pellentesque nisl urna, elementum vitae nulla at, maximus mattis nisl.</p>
-                </div>
-            </div>
-        </div>
+    <div class="col col-xl-10 col-lg-9 col-md-9">
+      <%= image_tag(@post.image_url.to_s, :class => 'post-image') %>
+      <span class="date-show-post"><%= @post.created_at.to_formatted_s(:short)%></span>
+      <br>
+      <span class="text"><%= simple_format(@post.text) %></span>
     </div>
+    <div class="col col-xl-2 col-lg-3 col-md-3">
+      <div class="right-side">
+        <div class="face">
+          <%=image_tag('face.jpg')%>
+        </div>
+        <hr class="dash">
+        <center>
+          <p align="middle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget pretium nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam neque libero, blandit sed diam laoreet, imperdiet pulvinar diam. Quisque
+            dui
+          </p>
+        </center>
+        <hr class="dash">
+
+        <div class="icons">
+          <div class="ico youtube"></div>
+          <div class="ico pinterest"></div>
+          <div class="ico instagram"></div>
+          <div class="ico vk"></div>
+          <div class="ico behance"></div>
+          <!--  <div class="ico facebook"></div> -->
+        </div>
+        <hr class="dash">
+        <div class="image-links">
+          <%=image_tag('youtube-link.png')%>
+        </div>
+        <hr class="dash">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget pretium nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam neque libero, blandit sed diam laoreet, imperdiet pulvinar diam. Quisque dui
+          purus, imperdiet at maximus vitae, malesuada eget justo. Duis id diam urna. Sed nec arcu id felis dapibus varius non ac odio. Pellentesque nisl urna, elementum vitae nulla at, maximus mattis nisl.</p>
+        </div>
+      </div>
+    </div>
+  </div>

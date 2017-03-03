@@ -30,6 +30,7 @@ img#logo {
 img#blog-logo {
   max-width: 100%;
 }
+
 .container.hat {
   background-color: $white-transparent;
   width: 100%;
@@ -85,30 +86,6 @@ img#blog-logo {
   color: #878787;
 }
 
-.slide {}
-
-.item {
-  text-align: center;
-  height: 500px;
-  width: 100%;
-}
-
-.item img {
-  margin: auto;
-}
-
-.carousel-caption {
-  font-family: 'Calibril';
-  font-size: 50px;
-  top: 58%;
-  transform: translateY(-50%);
-}
-#myCarousel {
-  .left.carousel-control,
-  .right.carousel-control {
-    background-image: none;
-  }
-}
 
 .notice {
   width: 400px;
@@ -126,7 +103,7 @@ img#blog-logo {
 hr.devider {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #a1887f, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), grey, rgba(0, 0, 0, 0));
   //    border-color: #a1887f;
 }
 footer {

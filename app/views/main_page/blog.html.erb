@@ -12,7 +12,7 @@
     <span class="text"><%= post.text.truncate_words(25) %></span>
     <br>
     <br>
-    <%= link_to('Read more', show_post_path(post.permalink)) %>
+    <%= link_to('Read more', show_post_path(post.permalink), :class => 'button') %>
     <hr class="dash">
   </div>
   <% end %>
