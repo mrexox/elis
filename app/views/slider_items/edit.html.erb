@@ -1,6 +1,6 @@
 <div class="slider_item edit">
-    <h1>Edit Slider Item <%= @post.id %></h1>
-    <%= form_for( @post ) do |f| %>
+    <h1>Edit Slider Item <%= @slider_item.id %></h1>
+    <%= form_for( @slider_item ) do |f| %>
 	<%= render(:partial => 'form', :locals => {:f => f}) %>
 	<div class="button-submit">
 	    <%= f.submit("Обновить слайд") %>
