@@ -1,21 +1,6 @@
 // Place all the styles related to the Post controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$dash-color: #D9DBCE;
-.dash {
-    border: 1px dashed $dash-color;
-    border-style: none none solid;
-}
-
-//
-// .right-side {
-//   padding: 16px;
-//   border-left: 1px solid $dash-color;
-//   border-style: dashed;
-//   border-right: none;
-//   border-top:none;
-//   border-bottom:none;
-// }
 
 .image {
     max-width: 300px;
@@ -23,15 +8,17 @@ $dash-color: #D9DBCE;
 }
 
 @import "icons";
-
-.image-links {
-    text-align: center;
-    img {
-        width: 90%;
-    }
-}
-
-.face img {
-    width: 100%;
-    border-radius: 9px;
+// Admin area for posts
+.posts-index {
+	.post-block {
+		background-color: #ebf5ee;
+		padding: 20px;
+		margin-top: 20px;
+		border-radius: 15px;
+	}
+	.post-image {
+		display: block;
+		max-height: 600px;
+		margin: auto;
+	}
 }

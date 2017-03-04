@@ -1,5 +1,5 @@
 class AccessController < ApplicationController
-
+	layout 'admin'
   before_action :check_logged_in, :except => [:login, :attempt_login, :logout]
   def console
     # displays menu and admin console

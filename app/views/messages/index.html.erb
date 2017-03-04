@@ -1,15 +1,5 @@
-<div class="notice">
-  <% if !flash[:notice].blank? %>
-  <p>Уведомление:
-    <%=flash[:notice] %>
-  </p>
-  <% end %>
-</div>
-
 <div class="messages index">
-  <h2>Все Сообщения</h2>
-
-  <%= link_to('Обратно к форме', contacts_path, :class => 'action back') %>
+  <h2>Сообщения, отправленные вам:</h2>
 
   <table class="listing" summary="Message list">
     <tr class="header">

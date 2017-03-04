@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get 'blog', to: 'main_page#blog'
   get 'shop', to: 'main_page#shop'
-  get 'contacts', to: 'messages#new'
+  get 'contacts', to: 'main_page#contact_me'
 
   resources :posts do
     # add delete here

@@ -1,14 +1,14 @@
-f<% @active = :blog %>
+<% @active = :blog %>
 <div class="container-fluid">
   <div class="row">
 
-    <div class="col col-xl-10 col-lg-9 col-md-9">
+    <div class="col col-xl-10 col-lg-9 col-md-8">
       <%= image_tag(@post.image_url.to_s, :class => 'post-image') %>
       <span class="date-show-post"><%= @post.created_at.to_formatted_s(:short)%></span>
       <br>
       <span class="text"><%= simple_format(@post.text) %></span>
     </div>
-    <div class="col col-xl-2 col-lg-3 col-md-3">
+    <div class="col col-xl-2 col-lg-3 col-md-4">
       <div class="right-side">
         <div class="face">
           <%=image_tag('face.jpg')%>

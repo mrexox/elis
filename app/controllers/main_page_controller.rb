@@ -21,4 +21,7 @@ class MainPageController < ApplicationController
 
   def shop
   end
+	def contact_me
+    @message = Message.new
+	end
 end

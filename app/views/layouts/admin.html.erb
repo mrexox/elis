@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elis Type: Admin</title>
+  <%= csrf_meta_tags %>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+					<%= link_to('Elis Type', home_path, :class => 'navbar-brand') %>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+							<li class="active"><%= link_to('Консоль', access_console_path) %></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Посты<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+									<li><%= link_to('Все посты', posts_path)%></li>
+									<li><%= link_to('Новый пост', new_post_path)%></li>
+<!--                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Destroying!</li>
+									<li><a href="#">Delet All Posts</a></li> -->
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Слайдер<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+									<li><%= link_to('Все слайды', slider_items_path)%></li>
+									<li><%= link_to('Новый слайд', new_slider_item_path)%></li>
+<!--                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Destroying</li>
+									<li><a href="#">Clear Slider</a></li> -->
+                </ul>
+              </li>
+							<li><%= link_to('Сообщения', messages_path) %></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+	<div class="container">
+      <% if !flash[:notice].blank? %>
+      <div class="notice">
+        <%= flash[:notice] %>
+      </div>
+      <% end %>
+
+    <%= yield %>
+	</div>
+</body>

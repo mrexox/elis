@@ -2,12 +2,13 @@
     <h1>Слайды</h1>
     <%= link_to('Новый слайд', new_slider_item_path)%>
     <% @slider_items.each do |si| %>
+			<div class="slider-block">
 	<h3><%= si.text %></h3>
 	<%= link_to('Изменить', edit_slider_item_path(si))%>
 	<%= link_to('Удалить', delete_slider_item_path(si))%>
 	<%=link_to('Открыть', slider_item_path(si))%><br />
 	<%= image_tag(si.image_url.to_s)%>
-	<p>Link: <a href="<%=si.url%>"><%=si.url%></a></p>
-	<br />
+	<p>Link: <%= link_to(si.url, si.url) %></p>
+			</div>
     <% end %>
 </div>

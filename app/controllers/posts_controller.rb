@@ -1,6 +1,6 @@
 # coding: utf-8
 class PostsController < ApplicationController
-
+	layout 'admin'
   before_action :check_logged_in
 
   def new

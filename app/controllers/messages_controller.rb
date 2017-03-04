@@ -1,6 +1,7 @@
 # coding: utf-8
 class MessagesController < ApplicationController
 
+	layout 'admin'
   before_action :check_logged_in, :only => [:show, :destroy, :index]
 def index
     # Only for admin
@@ -15,7 +16,8 @@ end
     @message = Message.new(message_params)
     if @message.save
       MessageMailer.inform(@message).deliver_now
-      redirect_to :controller => 'main_page', :action => 'home'
+			flash[:notice] = 'Сообщение отправлено, ждите моего ответа!'
+      redirect_to :controller => 'main_page', :action => 'contact_me'
     else
       flash[:notice] = 'Неверно заполнены поля. Попробуйте ещё раз.'
       redirect_to(contacts_path)

@@ -1,6 +1,7 @@
 # coding: utf-8
 class SliderItemsController < ApplicationController
   
+	layout 'admin'
   before_action :check_logged_in
   
   def new

@@ -1,15 +1,16 @@
 
-<div class="posts index">
+<div class="posts-index">
     <h1>Посты</h1>
     <%= link_to('Новый пост', new_post_path) %>
     <% @posts.each do |post| %>
-	<div class="post block">
+	<div class="post-block">
 	    <h2><%=link_to(post.name, post_path(post))%></h2>
-	    <p><%= link_to('Edit', edit_post_path(post))%></p>
-	    <div class="post image">
-		<%= image_tag(post.image_url.to_s) %>
-	    </div>
-	    <p><%=post.text%></p>
+			<p><%= link_to('Edit', edit_post_path(post))%>
+			<%= link_to('Delete', delete_post_path(post))%>
+			<%= link_to('Show', show_post_path(post.permalink))%></p>
+
+			<%= image_tag(post.image_url.to_s, :class => 'post-image') %>
+	    <p><%=simple_format(post.text)%></p>
 	</div>
     <% end %>
 </div>
