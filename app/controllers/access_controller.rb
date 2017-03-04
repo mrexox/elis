@@ -1,5 +1,5 @@
 class AccessController < ApplicationController
-	layout 'admin'
+	layout :resolve_layout
   before_action :check_logged_in, :except => [:login, :attempt_login, :logout]
   def console
     # displays menu and admin console
@@ -32,4 +32,14 @@ class AccessController < ApplicationController
     flash[:notice] = 'U have logged out'
     redirect_to(root_path)
   end
+
+	private
+	def resolve_layout
+		case action_name
+		when 'login'
+			'application'
+		else
+			'admin'
+		end
+	end
 end
