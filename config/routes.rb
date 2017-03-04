@@ -13,7 +13,6 @@ Rails.application.routes.draw do
 
   resources :messages, only: [:index, :create, :new, :destroy, :show]
 
-
   get 'blog', to: 'main_page#blog'
   get 'shop', to: 'main_page#shop'
   get 'contacts', to: 'main_page#contact_me'
