@@ -4,17 +4,17 @@
 $white-transparent: rgba(247, 247, 247, 0.05);
 @font-face {
   font-family: 'Quicksand Bold';
-  src: url('fonts/Quicksand-Bold.ttf') format('truetype');
+  src: font-url('fonts/Quicksand-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Quicksand Regular';
-  src: url('fonts/Quicksand-Regular.ttf') format('truetype');
+  src: font-url('fonts/Quicksand-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Calibril';
-  src: url('fonts/calibril.ttf') format('truetype');
+  src: font-url('fonts/calibril.ttf') format('truetype');
 }
 html, body { height: 100%; }
 #body-content {

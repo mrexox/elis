@@ -1,13 +1,13 @@
 // Place all the styles related to the Message controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.row {
-  width: 100%;
-}
 .new-message {
   width: 100%;
   text-align: center;
   font-family: 'Calibril';
+	.mail {
+		font-size: 17px;
+	}
   table {
     margin: 0 auto;
     width: 100%;
@@ -19,6 +19,7 @@
   }
   td.caption {
     width: 50px;
+		margin-left: 0px;
   }
   .button {
     margin: 0 auto;

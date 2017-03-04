@@ -10,7 +10,7 @@
 			<%= link_to('Show', show_post_path(post.permalink))%></p>
 
 			<%= image_tag(post.image_url.to_s, :class => 'post-image') %>
-	    <p><%=simple_format(post.text)%></p>
+	    <p><%=raw(post.text)%></p>
 	</div>
     <% end %>
 </div>

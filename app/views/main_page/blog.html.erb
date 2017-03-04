@@ -9,7 +9,7 @@
     <br>
     <span class="date"><%= post.created_at.to_formatted_s(:short)%></span>
     <%= image_tag(post.image_url.to_s, :class => 'post-image') %>
-    <span class="text"><%= post.text.truncate_words(25) %></span>
+    <span class="text"><%= simple_format(post.text.truncate_words(25)) %></span>
     <br>
     <br>
     <%= link_to('Read more', show_post_path(post.permalink), :class => 'button') %>

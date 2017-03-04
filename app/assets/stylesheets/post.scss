@@ -7,6 +7,13 @@
     max-height: 300px;
 }
 
+img.post-image {
+    width: 100%;
+    height: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	}
 @import "icons";
 // Admin area for posts
 .posts-index {
