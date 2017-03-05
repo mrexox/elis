@@ -1,7 +1,7 @@
 
 <div class="posts-index">
     <h1>Посты</h1>
-    <%= link_to('Новый пост', new_post_path) %>
+		<%= button_to('Новый пост', new_post_path, :method => :get) %>
     <% @posts.each do |post| %>
 	<div class="post-block">
 	    <h2><%=link_to(post.name, post_path(post))%></h2>
@@ -13,4 +13,5 @@
 	    <p><%=raw(post.text)%></p>
 	</div>
     <% end %>
+		<%= button_to('Новый пост', new_post_path, :method => :get) %>
 </div>

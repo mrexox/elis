@@ -23,10 +23,8 @@ html, body { height: 100%; }
 img#logo {
   display: block;
   margin-left: auto;
-  margin-right: auto;
-  max-width: 40%;//300px;
-}
-
+  margin-right: auto; max-width: 40%;//300px; 
+} 
 img#blog-logo {
   max-width: 100%;
 }
@@ -106,8 +104,8 @@ hr.devider {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), grey, rgba(0, 0, 0, 0));
   //    border-color: #a1887f;
 }
+
 footer {
   height: 70px;
 }
 // make import on them
-@import "icons";

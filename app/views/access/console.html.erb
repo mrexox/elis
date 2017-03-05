@@ -1,13 +1,28 @@
 <div class="container">
-<%= link_to('Все посты', posts_path)%>
-<br />
-<%= link_to('Все слайды', slider_items_path)%>
-<br />
-<%= link_to('Новый пост', new_post_path)%>
-<br />
-<%= link_to('Новый слайд', new_slider_item_path)%>
-<br />
-<%= link_to('Все сообщения', messages_path)%>
-<br />
-<%= link_to('Выйти', access_logout_path)%>
+	<table class="console-table">
+		<tr>
+			<td>
+				Количество постов:
+			</td>
+			<td>
+				<%= @posts_count %>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Количество слайдов в слайдере:
+			</td>
+			<td>
+				<%= @slider_items_count %>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Количество сообщений:
+			</td>
+			<td>
+				<%= @messages_count %>
+			</td>
+		</tr>
+	</table>
 </div>

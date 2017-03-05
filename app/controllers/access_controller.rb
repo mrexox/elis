@@ -3,6 +3,9 @@ class AccessController < ApplicationController
   before_action :check_logged_in, :except => [:login, :attempt_login, :logout]
   def console
     # displays menu and admin console
+		@posts_count = Post.all.count
+		@messages_count = Message.all.count
+		@slider_items_count = SliderItem.all.count
   end
 
   def login
