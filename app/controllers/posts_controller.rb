@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.new(parsed_params)
     if @post.save
       flash[:notice] = "Пост #{@post.name} добавлен"
       redirect_to(posts_path)
@@ -29,9 +29,10 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find(params[:id])
   end
+
   def update
     @post = Post.find(params[:id])
-    if @post.update_attributes(post_params)
+    if @post.update_attributes(parsed_params)
       flash[:notice] = 'Пост успешно обновлён'
       redirect_to(posts_path)
     else
@@ -52,6 +53,29 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:image, :name, :text, :permalink)
+    params.require(:post).permit(:image, :name, :text, :permalink, :tags)
   end
+
+	def parse_tags
+		tag_names = post_params[:tags].strip.split(/\s*,\s*/).uniq
+		tags = []
+		tag_names.each do |tag_name|
+			tag = Tag.where(:tag_name => tag_name).first
+			if tag.nil?
+				tag = Tag.new(:tag_name => tag_name)
+				if !tag.save 
+					flash[:notice] = "Не получилось сохранить тэг #{tag_name}"
+				end
+			end
+			tags << tag
+		end
+		tags
+	end
+
+	def parsed_params
+		parameters = post_params
+		parameters[:tags] = parse_tags
+		parameters
+	end
+
 end

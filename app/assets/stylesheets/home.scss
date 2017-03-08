@@ -56,11 +56,59 @@
   height: 100%;
 }
 
-.youtube {
-	text-align: center;
-	font-size: 60px;
+// From Zen
+.posts-brief {
+	div.left,
+	div.right {
+		margin: 0 auto;	
+		width: 90%; 
+		height: 300px;
+		margin-top: 30px;
+	}
+
+		img {
+			max-height: 100%;
+			max-width: 50%;
+			border: 1px solid;
+			border-radius: 9px;
+			vertical-align: middle;
+			display: inline-block;
+	}
+	.post-name {
+		font-family: 'Times New Roman', Times, serif;
+		font-size: 30px;
+	}
+	.text {
+		font-family: 'Calibril', Times, serif;
+    color:black;
+		position: relative;
+		word-wrap: break-word;
+		height: 100%;
+		padding: 20px;
+		max-width: 50%;
+	}
+	.left {
+		img {	float: left; }
+		.text { 
+			float: left;
+			text-align: left;
+		}
+		.button { float: left; }
+	}
+
+	.right {
+		img {	float: right;	}
+		.text { 
+			float: right;
+			text-align: right;
+		}
+		.button { float: right; }
+	}
+}
+// ===
 	.hr-text {
 		font-family: 'Times New Roman';
+		font-size: 60px;
 		font-weight: bold;
 		line-height: 1em;
 		position: relative;
@@ -96,6 +144,8 @@
 	
 	
 	}
+.youtube {
+	text-align: center;
 	@media (max-width: 767px) {
 		.video {
 			max-width: 100%;

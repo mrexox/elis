@@ -3,3 +3,5 @@
       <span class="date-show-post"><%= @post.created_at.to_formatted_s(:short)%></span>
       <br>
       <span class="text"><%= raw(@post.text) %></span>
+			<p>Tags:</p>
+			<p><%= @post.tags.collect{ |tag| tag.tag_name }.join(', ') %></p>

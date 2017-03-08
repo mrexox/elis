@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170302115936) do
+ActiveRecord::Schema.define(version: 20170307222949) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "username"
@@ -44,12 +44,22 @@ ActiveRecord::Schema.define(version: 20170302115936) do
     t.string   "permalink"
   end
 
+  create_table "posts_tags", id: false, force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "tag_id"
+    t.index ["post_id", "tag_id"], name: "index_posts_tags_on_post_id_and_tag_id"
+  end
+
   create_table "slider_items", force: :cascade do |t|
     t.text     "text"
     t.string   "url"
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "tag_name", null: false
   end
 
 end

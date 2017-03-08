@@ -39,8 +39,22 @@
   </div>
 </div>
 <% end %>
-<div class="container main">
-
+<hr class="hr-text" data-content="New Posts">
+<div class="container posts-brief">
+	<% @posts.each_with_index do |post, i|%>
+		<% if i % 2 == 0 %>
+				<div class="left">
+			<% else %>
+				<div class="right">
+			<% end %>
+					<%= image_tag(post.image_url.to_s) %> 
+			<div class="text">
+			<span class="post-name"><%= post.name %></span>
+			<span ><%= simple_format(post.text.truncate_words(25))%> </span>
+    <%= link_to('Read more', show_post_path(post.permalink), :class => 'button') %>
+			</div>
+    </div>
+	<% end %>
 </div>
 <div class="youtube">
  <hr class="hr-text" data-content="YouTube">
