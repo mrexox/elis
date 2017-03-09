@@ -1,0 +1,27 @@
+<table class="tag-table">
+	<tr>
+		<th>Название</th>
+		<th class="center">Упоминания</th>
+		<th></th>
+	</tr>
+	<% @tags.each do |tag| %>
+		<tr>
+			<td>
+				<%= tag.tag_name %>
+			</td>
+			<td class="center">
+				<%= @counts[tag.id] %>
+			</td>
+			<td>
+				<%= link_to('x', tag_path(tag.id), :method => :delete) %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+<div id="add-tag">
+<%= form_tag(cotroller: 'tags', action: 'create', method: :post) do %>
+	<%= text_field(:tag, :tag_name) %>
+	<%= submit_tag("Add", :onclick => 'undisplayForm()') %>
+<% end %>
+</div>
+<input type="button" id="add-tag-button" style:"display: inline-block;" value="+" onClick="addTag();" />

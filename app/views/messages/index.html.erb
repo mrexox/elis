@@ -1,7 +1,7 @@
 <div class="messages index">
   <h2>Сообщения, отправленные вам:</h2>
 
-  <table class="listing" summary="Message list">
+  <table summary="Message list">
     <tr class="header">
       <th>Дата создания</th>
       <th>Имя</th>
@@ -13,7 +13,7 @@
     </tr>
     <% @messages.each do |message| %>
     <tr>
-      <td><%= message.created_at %></td>
+      <td><%= message.created_at.to_formatted_s(:long) %></td>
       <td><%= message.name %></td>
       <td><%= message.theme %></td>
       <td><%= message.phone_number %></td>

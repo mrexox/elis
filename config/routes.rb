@@ -9,13 +9,12 @@ Rails.application.routes.draw do
   get 'access/logout'
   get 'blog/:permalink', :to => 'main_page#show_post', :as => 'show_post'
 
-  # resources :images, only: [:index, :create, :destroy, :show]
-
-  resources :messages, only: [:index, :create, :new, :destroy, :show]
-
   get 'blog', to: 'main_page#blog'
   get 'shop', to: 'main_page#shop'
   get 'contacts', to: 'main_page#contact_me'
+
+  resources :messages, only: [:index, :create, :new, :destroy, :show]
+	resources :tags, only: [:index, :create, :destroy]
 
   resources :posts do
     # add delete here
