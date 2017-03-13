@@ -72,10 +72,16 @@ $dash-color: #D9DBCE;
         width: 90%;
     }
 }
+.left-side {
+	margin-left: 70px;
+}
 
 @media only screen and (max-width: 768px) {
 	.right-side {
 		display: none;
+	}
+	.left-side {
+		margin-left: 0;
 	}
 }
 
@@ -96,7 +102,8 @@ $dash-color: #D9DBCE;
 	display: block;
 	border-radius: 5px;
 	padding: 3px;
-	text-align: center;
+	margin-top: 30px;
+	text-align: right;
 	color: #babacc;
 	a {
 		color: #babacc;
