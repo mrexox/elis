@@ -1,0 +1,39 @@
+.search-field {
+	margin-bottom: 30px;
+	.search-caption {
+		display: block;
+		font-family: 'Times New Roman';
+		font-size: 28px;
+
+	}
+	form {
+		text-align: center;
+	}
+  #tag {
+		margin: 0 auto;
+    border-color: #debdac;
+		width: 300px;
+  }
+  #tag:hover,
+  #tag:focus {
+    border-color: black;
+    box-shadow: none;
+  }
+	.search-button {
+		margin-top: 10px;
+		background-color: white;
+		border-color: black;
+		height: 24px;
+		width: 69px;
+		border-width: 1px;
+		border-style:solid;
+		color: #444;
+	}
+
+	.search-button:hover {
+		border-color: #D9DBCE;
+		background-color: black;
+		text-decoration: none;
+		color: white;
+	}
+}

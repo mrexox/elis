@@ -1,26 +1,32 @@
 // Place all the styles related to the Message controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.row {
+	width: 100%;
+}
 .new-message {
   width: 100%;
-  text-align: center;
+  text-align: left;
   font-family: 'Calibril';
-	.mail {
-		font-size: 17px;
+	margin-left: 10px;
+	margin-right: 10px;
+	.contacts-text {
+		text-align: center;
+		.mail {
+			font-size: 17px;
+		}
+		span.contact-me {
+			font-family: 'Times New Roman';
+			text-decoration: bold;
+			font-size: 60px;
+		}
 	}
-  table {
-    margin: 0 auto;
-    width: 100%;
-    margin-top: 40px;
-  }
-  td {
-    padding: 5px;
-    text-align: right;
-  }
-  td.caption {
-    width: 50px;
-		margin-left: 0px;
-  }
+	span.caption {
+		font-size: 16px;
+		color: grey;
+		display: block;
+		margin-top: 10px;
+	}
   .button {
     margin: 0 auto;
     color: white;
@@ -33,16 +39,12 @@
     background-color: #debdac;
   }
   .form-control {
+		margin: 0 auto;
     border-color: #debdac;
   }
   .form-control:hover,
   .form-control:focus {
     border-color: black;
     box-shadow: none;
-  }
-  span.contact-me {
-    font-family: 'Times New Roman';
-    text-decoration: bold;
-    font-size: 60px;
   }
 }

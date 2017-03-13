@@ -21,7 +21,23 @@ class MainPageController < ApplicationController
 
   def shop
   end
+
 	def contact_me
     @message = Message.new
+	end
+
+	def search
+		@tag_name = params[:tag]
+		tag = Tag.find_by(:tag_name => @tag_name)
+		if tag.blank?
+			@posts_found = false
+		else
+			@posts = tag.posts
+			if @posts.blank?
+				@posts_found = false
+			else
+				@posts_found = true
+			end
+		end
 	end
 end

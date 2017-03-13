@@ -7,5 +7,4 @@ class Post < ApplicationRecord
 
   validates :permalink, :presence => true,
     :uniqueness => true
-
 end

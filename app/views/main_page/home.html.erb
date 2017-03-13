@@ -39,7 +39,7 @@
   </div>
 </div>
 <% end %>
-<hr class="hr-text" data-content="New Posts">
+<!-- <hr class="hr-text" data-content="New Posts"> -->
 <div class="container posts-brief">
 	<% @posts.each_with_index do |post, i|%>
 		<% if i % 2 == 0 %>
@@ -47,7 +47,9 @@
 			<% else %>
 				<div class="right">
 			<% end %>
+			<div class="image">
 					<%= image_tag(post.image_url.to_s) %> 
+			</div>
 			<div class="text">
 			<span class="post-name"><%= post.name %></span>
 			<span ><%= simple_format(post.text.truncate_words(25))%> </span>

@@ -1,0 +1,25 @@
+<div class="search-field">
+	<%= form_tag('/search', method: :get) do %>
+		<span class="search-caption">Search for</span>
+		<%= text_field_tag(:tag, @tag_name, :class => 'form-control') %>
+		<%= submit_tag('Find', :class => 'search-button') %>
+	<% end %>
+</div>
+<% if @posts_found %>
+  <% @posts.each do |post|%>
+  <div class="record">
+
+    <span class="header"><%= post.name %></span>
+    <br>
+    <span class="date"><%= post.created_at.to_formatted_s(:short)%></span>
+    <%= image_tag(post.image_url.to_s, :class => 'post-image') %>
+    <span class="text"><%= simple_format(post.text.truncate_words(25)) %></span>
+    <br>
+    <br>
+    <%= link_to('Read more', show_post_path(post.permalink), :class => 'button') %>
+    <hr class="dash">
+  </div>
+<% end %>
+<% else %>
+	<h1>No posts found</h1>
+<% end %>

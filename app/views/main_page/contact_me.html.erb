@@ -4,34 +4,25 @@
       <div class="col col-lg-3 col-md-1 col-xs-0">
       </div>
       <div class="col col-lg-6  col-md-11 col-xs-12">
-
-      <p><span class="contact-me">Contact Me</span></p>
-      <p><span class="mail">anilexez@gmail.com</span></p>
+			<div class="contacts-text">
+				<p><span class="contact-me">Contact Me</span></p>
+				<p><span class="mail">anilexez@gmail.com</span></p>
+			</div>
         <%= form_for(@message, url: {controller: 'messages', action: 'create'}, html: {method: 'post'}) do |f| %>
-        <table>
-
-        <tr>
-          <td class="caption">Имя *</td>
-          <td><%= f.text_field(:name, :class => 'form-control') %></td>
-        </tr>
-        <tr>
-          <td class="caption">Телефон</td>
-          <td><%= f.phone_field(:phone_number, :class => 'form-control') %></td>
-        </tr>
-        <tr>
-          <td class="caption">e-mail *</td>
-          <td><%= f.text_field(:email, :class => 'form-control') %></td>
-        </tr>
-        <tr>
-          <td class="caption">Тема *</td>
-          <td><%= f.text_field(:theme, :class => 'form-control') %></td>
-        </tr>
-        <tr>
-          <td class="caption">Сообщение*</td>
-          <td><%= f.text_area(:text, :class => 'form-control', :rows => '5') %> <br></td>
-        </tr></table>
+			<div class="contact-form">
+          <span class="caption">Имя *</span>
+          <%= f.text_field(:name, :class => 'form-control') %>
+          <span class="caption">Телефон</span>
+          <%= f.phone_field(:phone_number, :class => 'form-control') %>
+          <span class="caption">e-mail *</span>
+          <%= f.text_field(:email, :class => 'form-control') %>
+          <span class="caption">Тема *</span>
+          <%= f.text_field(:theme, :class => 'form-control') %>
+          <span class="caption">Сообщение *</span>
+          <%= f.text_area(:text, :class => 'form-control', :rows => '5') %> <br>
         <%= f.submit("Отправить", :class => 'button') %>
-      <%  end %>
+			<%  end %>
+			</div>
   </div>
   <div class="col col-lg-3 col-md-1 col-xs-0">
     </div>
