@@ -52,7 +52,7 @@
 			</div>
 			<div class="text">
 			<span class="post-name"><%= post.name %></span>
-			<span ><%= simple_format(post.text.truncate_words(25))%> </span>
+			<span ><%= simple_format(post.text.truncate_words(9))%> </span>
     <%= link_to('Read more', show_post_path(post.permalink), :class => 'button') %>
 			</div>
     </div>

@@ -17,6 +17,7 @@ class MainPageController < ApplicationController
 
   def show_post
     @post = Post.where(:permalink => params[:permalink]).first
+		@tags = Tag.sorted
   end
 
   def shop

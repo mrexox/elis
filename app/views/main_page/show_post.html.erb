@@ -1,7 +1,6 @@
 <% @active = :blog %>
 <div class="container-fluid">
-  <div class="row">
-
+  <div class="row-fluid"> 
     <div class="col col-xl-10 col-lg-9 col-md-9 col-sm-9">
 			<div class="left-side">
       <%= image_tag(@post.image_url.to_s, :class => 'post-image') %>
@@ -32,12 +31,23 @@
           <div class="ico instagram"></div>
           <div class="ico vk"></div>
           <div class="ico behance"></div>
-          <!--  <div class="ico facebook"></div> -->
         </div>
         <hr class="dash">
         <div class="image-links">
           <%=image_tag('youtube-link.png')%>
         </div>
+        <hr class="dash">
+				<div class="tag-list">
+				<div id="categories">CATEGORIES</div> 
+					<div id="tags-categories">
+						<hr>
+					<ul>
+					<% @tags.each do |tag| %>
+						<li><%= link_to(tag.tag_name.capitalize, search_path(:tag => tag.tag_name)) %></li>
+					<% end %>
+					</ul>
+					</div>
+				</div>
         <hr class="dash">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget pretium nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam neque libero, blandit sed diam laoreet, imperdiet pulvinar diam. Quisque dui
           purus, imperdiet at maximus vitae, malesuada eget justo. Duis id diam urna. Sed nec arcu id felis dapibus varius non ac odio. Pellentesque nisl urna, elementum vitae nulla at, maximus mattis nisl.</p>

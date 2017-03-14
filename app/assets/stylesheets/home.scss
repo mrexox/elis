@@ -58,6 +58,7 @@
 
 // From Zen
 .posts-brief {
+	margin-bottom: 50px;
 	div.left,
 	div.right {
 		margin: 0 auto;	
@@ -72,17 +73,26 @@
 	div.right {
 		height: 450px;
 	}
+	.post-name {
+		font-size: 40px;
+	}
 }
 @media (max-width: 991px) and (min-width: 768px) {
 	div.left,
 	div.right {
 		height: 400px;
 	}
+	.post-name {
+		font-size: 35px;
+	}
 }
 @media (max-width: 767px) {
 	div.left,
 	div.right {
 		height: 200px;
+	}
+	.post-name {
+		font-size: 25px;
 	}
 }
 	.image {
@@ -100,7 +110,6 @@
 	}
 	.post-name {
 		font-family: 'Times New Roman', Times, serif;
-		font-size: 40px;
 		color:#0d0d0d;
 		font-weight: bold;
 	}
@@ -109,7 +118,7 @@
     color:black;
 		position: relative;
 		word-wrap: break-word;
-		height: 100%;
+		max-height: 100%;
 		padding: 10px;
 		max-width: 50%;
 	}

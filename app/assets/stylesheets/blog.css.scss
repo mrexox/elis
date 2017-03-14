@@ -78,16 +78,48 @@ $dash-color: #D9DBCE;
 
 @media only screen and (max-width: 768px) {
 	.right-side {
-		display: none;
+		margin-top: 40px;
 	}
 	.left-side {
 		margin-left: 0;
 	}
 }
 
-
 .face img {
     width: 100%;
+}
+
+.tag-list {
+	font-family: 'Calibril';
+	font-size: 16px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+	a {
+		color: grey;
+	}
+	#categories{
+		margin-bottom: 5px;
+		margin-top: 5px;
+	}
+	#categories:hover {
+		color: #848484;
+		cursor: pointer;
+	}
+	background-color: #F5D0A9;
+	ul {
+		padding: 0;
+		list-style-type: none;
+	}
+	hr {
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	#tags-categories {
+		display: none;
+	}
 }
 
 .post-image {
@@ -105,11 +137,4 @@ $dash-color: #D9DBCE;
 	margin-top: 30px;
 	text-align: right;
 	color: #babacc;
-	a {
-		color: #babacc;
-	}
-	a:hover {
-		color: black;
-		text-decoration: none;
-	}
 }
