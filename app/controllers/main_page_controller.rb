@@ -27,6 +27,12 @@ class MainPageController < ApplicationController
     @message = Message.new
 	end
 
+	def about
+	end
+
+	def portfolio
+	end
+
 	def search
 		@tag_name = params[:tag]
 		tag = Tag.find_by(:tag_name => @tag_name)

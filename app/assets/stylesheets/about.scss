@@ -1,0 +1,50 @@
+.about {
+	margin-top: 40px;
+	.hi {
+		display: block;
+		max-width: 60%;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	font-family: 'Calibril';
+	font-size: 18px;
+	.tab {
+		margin-left: 10px;
+	}
+	table {
+		width: 60%;
+		margin: 0 auto;
+		padding: 20px;
+		img {
+			max-width: 100%;
+		}
+		td {
+			padding: 10px;
+			text-align: left;
+			vertical-align: top;
+		}
+		td.elina {
+			width: 40%;
+		}
+		td.victory {
+			width: 50%;
+		}
+	}
+	@media only screen and (max-width: 991px) {
+		font-size: 14px;
+		.hi {
+			max-width: 90%;
+		}
+		table {
+			width: 90%;
+		}
+	}
+
+	.xoxo {
+		max-width: 10%;
+		margin: 0 auto;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		display: block;
+	}
+}

@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get 'shop', to: 'main_page#shop'
   get 'contacts', to: 'main_page#contact_me'
 	get 'search', to: 'main_page#search'
-
+	get 'about', to: 'main_page#about'
+	get 'portfolio', to: 'main_page#portfolio'		
   resources :messages, only: [:index, :create, :new, :destroy, :show]
 	resources :tags, only: [:index, :create, :destroy]
 

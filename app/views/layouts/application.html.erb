@@ -10,7 +10,6 @@
 
 <body>
   <div id="body-content">
-    <!--<%= image_tag('logo.png', :id => 'logo') %>-->
     <img src="/logo.png" id="logo" alt="Logo">
     <div class="container hat">
       <div class="row-fluid">
@@ -21,6 +20,8 @@
             <li <%= active?(@active, :home) %> id="menu-element"><%= link_to('HOME', root_path)%></li>
             <li <%= active?(@active, :blog) %> id="menu-element"><%= link_to('BLOG', blog_path) %></li>
             <li <%= active?(@active, :shop) %> id="menu-element"><%= link_to('SHOP', shop_path) %></li>
+            <li <%= active?(@active, :portfolio) %> id="menu-element"><%= link_to('PORTFOLIO', portfolio_path) %></li>
+            <li <%= active?(@active, :about) %> id="menu-element"><%= link_to('ABOUT', about_path) %></li>
             <li <%= active?(@active, :contacts) %> id="menu-element"><%= link_to('CONTACTS', contacts_path) %></li>
           </ul>
         </div>
