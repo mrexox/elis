@@ -20,3 +20,19 @@
     top: 58%;
 	}
 }
+.slider_item.new table {
+	width: 100%;
+	margin: 0 auto;
+	td {
+		min-height: 30px;
+		padding: 5px;
+		text-align: left;
+		vertical-align: top;
+	}
+	textarea {
+		width: 100%;
+	}
+	input {
+		width: 100%;
+	}
+}
