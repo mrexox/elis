@@ -1,24 +1,6 @@
-# README
+# Elis Type Site
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a source code of Elis Type web-site.
+You can see the development beta-version [here](https://calm-sea-98145.herokuapp.com/)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Working site is coming soon.

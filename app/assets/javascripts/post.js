@@ -5,6 +5,6 @@
 function generatePermalink() {
 	var name = document.getElementById('name').value;
 	name = name.toLowerCase();
-	name = name.replace(/\s+/g, '-');
+	name = name.replace(/[^\w\s]/g, '').replace(/\s+/g, '-');
 	document.getElementById('permalink').value = name;
 }
