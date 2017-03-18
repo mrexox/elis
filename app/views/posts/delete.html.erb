@@ -3,7 +3,7 @@
 	<p>Точно удалить пост <%= @post.name%>?</p>
 	<%= form_for(@post, :method => 'delete') do |f| %>
 		<% if !f.object.images.empty? %>
-			<%= image_tag(f.object.image_url.to_s, :class => 'image')%>
+			<%= image_tag(f.object.images.first.url.to_s, :class => 'image')%>
 		<% end %>
 		<h3>Текст:</h3>
 		<p><%=raw f.object.text%></p>

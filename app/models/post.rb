@@ -1,7 +1,6 @@
 class Post < ApplicationRecord
 
 	has_and_belongs_to_many :tags
-	has_and_belongs_to_many :images
 	
 	mount_uploaders :images, ImageUploader
 	serialize :images, JSON # remove in production (non-SQLite3)

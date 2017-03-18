@@ -8,7 +8,9 @@
 			<span class="header"><%= post.name %></span>
 			<br>
 			<span class="date"><%= post.created_at.strftime('%d %b %Y')%></span>
+			<% if !post.images.empty? %>
 			<%= image_tag(post.images.first.url.to_s, :class => 'post-image') %>
+		<% end %>
 			<span class="text"><%= simple_format(post.text.truncate_words(25)) %></span>
 			<br>
 			<br>
