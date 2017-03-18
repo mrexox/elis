@@ -6,8 +6,10 @@
     <div class="col col-xl-10 col-lg-9 col-md-9 col-sm-9">
 			<div class="left-side">
 				<p class="header"> <%= @post.name %></p>
-      <p class="date"><%= @post.created_at.strftime('%d %b %Y')%></p>
-      <%= image_tag(@post.image_url.to_s, :class => 'post-image') %>
+				<p class="date"><%= @post.created_at.strftime('%d %b %Y')%></p>
+				<% @post.images.each do |image| %>
+					<%= image_tag(image.url.to_s, :class => 'post-image') %>
+			<% end %>
       <br>
       <span class="text"><%= raw(@post.text) %></span>
 			<div class="tags">

@@ -2,27 +2,27 @@
 <%= image_tag('blog-logo.jpg', :id => 'blog-logo') %>
 <hr class="devider">
 <div class="container">
-  <% @posts.each do |post|%>
-  <div class="record">
+	<% @posts.each do |post|%>
+		<div class="record">
 
-    <span class="header"><%= post.name %></span>
-    <br>
-    <span class="date"><%= post.created_at.strftime('%d %b %Y')%></span>
-    <%= image_tag(post.image_url.to_s, :class => 'post-image') %>
-    <span class="text"><%= simple_format(post.text.truncate_words(25)) %></span>
-    <br>
-    <br>
-    <%= link_to('Read more', show_post_path(post.permalink), :class => 'button') %>
-    <hr class="dash">
-  </div>
-  <% end %>
-  <div class="pages">
-    <% 1.upto((@posts_number / 3.0).ceil) do |n|%>
-      <% if @current_page == n %>
-        <strong><%= link_to(n, blog_path(:page => n)) %></strong>
-      <% else %>
-        <%= link_to(n, blog_path(:page => n)) %>
-      <% end %>
-    <% end %>
-  </div>
+			<span class="header"><%= post.name %></span>
+			<br>
+			<span class="date"><%= post.created_at.strftime('%d %b %Y')%></span>
+			<%= image_tag(post.images.first.url.to_s, :class => 'post-image') %>
+			<span class="text"><%= simple_format(post.text.truncate_words(25)) %></span>
+			<br>
+			<br>
+			<%= link_to('Read more', show_post_path(post.permalink), :class => 'button') %>
+			<hr class="dash">
+		</div>
+	<% end %>
+	<div class="pages">
+		<% 1.upto((@posts_number / 3.0).ceil) do |n|%>
+			<% if @current_page == n %>
+				<strong><%= link_to(n, blog_path(:page => n)) %></strong>
+			<% else %>
+				<%= link_to(n, blog_path(:page => n)) %>
+			<% end %>
+		<% end %>
+	</div>
 </div>

@@ -8,8 +8,9 @@
 			<p><%= link_to('Edit', edit_post_path(post))%>
 			<%= link_to('Delete', delete_post_path(post))%>
 			<%= link_to('Show', show_post_path(post.permalink))%></p>
-
-			<%= image_tag(post.image_url.to_s, :class => 'post-image') %>
+			<% if !post.images.empty? %>
+				<%= image_tag(post.images.first.url.to_s, :class => 'post-image') %>
+			<% end %>	
 	    <p><%=raw(post.text)%></p>
 	</div>
     <% end %>

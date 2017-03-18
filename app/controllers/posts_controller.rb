@@ -53,7 +53,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:image, :name, :text, :permalink, :tags)
+    params.require(:post).permit(:name, :text, :permalink, :tags, {:images => []})
   end
 
 	def parse_tags

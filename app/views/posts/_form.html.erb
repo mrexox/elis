@@ -1,22 +1,22 @@
 <table>
-  <tr>
-    <th>Название:</th>
-    <td> <%= f.text_field(:name) %> </td>
-  </tr>
-  <tr>
-    <th>Текст:</th>
-    <td> <%= raw f.text_area(:text, size: '60x20') %></td>
-  </tr>
-  <tr>
-    <td>Обложка:</td>
-    <td><%= f.file_field :image %></td>
-  </tr>
 	<tr>
-      <td>Permalink</td>
-      <td><%= f.text_field(:permalink) %></td>
-  </tr>
+		<th>Название:</th>
+		<td> <%= f.text_field(:name) %> </td>
+	</tr>
+	<tr>
+		<th>Текст:</th>
+		<td> <%= raw f.text_area(:text, size: '60x20') %></td>
+	</tr>
+	<tr>
+		<td>Изображения:</td>
+		<td><%= f.file_field :images, multiple: true %>
+	</tr>
+	<tr>
+		<td>Permalink</td>
+		<td><%= f.text_field(:permalink) %></td>
+	</tr>
 	<tr>
 		<td>Tags</td>
 		<td><%= f.text_field(:tags, :value => f.object.tags.collect{ |tag| tag.tag_name }.join(', ') ) %>
-	</tr>
+</tr>
 </table>

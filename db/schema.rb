@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170307213753) do
+ActiveRecord::Schema.define(version: 20170318093511) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "username"
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 20170307213753) do
     t.text     "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "image"
     t.string   "permalink"
+    t.string   "images"
   end
 
   create_table "posts_tags", id: false, force: :cascade do |t|
