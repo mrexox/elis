@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
 
   def check_logged_in
     unless session[:user_id]
-      flash[:notice] = 'Please, log in.'
-      redirect_to(access_login_path)
+      flash[:notice] = 'Прошу, заходите...'
+      redirect_to(login_path)
     end
   end
   

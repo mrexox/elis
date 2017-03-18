@@ -4,11 +4,11 @@ Rails.application.routes.draw do
 
   get 'admin', :to => 'access#console'
   get 'access/console'
-  get 'access/login'
   post 'access/attempt_login'
   get 'access/logout'
   get 'blog/:permalink', :to => 'main_page#show_post', :as => 'show_post'
 
+	get 'login', to: 'main_page#login'
   get 'blog', to: 'main_page#blog'
   get 'shop', to: 'main_page#shop'
   get 'contacts', to: 'main_page#contact_me'

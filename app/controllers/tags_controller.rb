@@ -13,9 +13,9 @@ class TagsController < ApplicationController
 	def update
 		tag = Tag.find(params[:id])
 		if tag.update_attributes(tag_params)
-			flash[:notice] = 'Tag was updated'
+			flash[:notice] = "Тэг '#{tag.tag_name}' был переименован во всех постах"
 		else
-			flash[:notice] = "Unable to update '#{tag.tag_name}'"
+			flash[:notice] = "Кажется, этот тэг уже существует..." if !tag.tag_name.empty?
 		end
 		retirect_to(tags_path)
 	end
@@ -23,9 +23,9 @@ class TagsController < ApplicationController
 	def create
 		tag = Tag.new(tag_params)
 		if tag.save
-			flash[:notice] = 'Tagg added'
+			flash[:notice] = "Был добавлен новый тэг '#{tag.tag_name}'"
 		else
-			flash[:notice] = "Check the tag '#{tag.tag_name}' again"
+			flash[:notice] = "Кажется, тэг '#{tag.tag_name}' уже существует..." if !tag.tag_name.empty?
 		end
 		redirect_to(tags_path)
 	end
@@ -33,9 +33,9 @@ class TagsController < ApplicationController
 	def destroy
 		tag = Tag.find(params[:id])
 		if tag.destroy
-			flash[:notice] = "Tag #{tag.tag_name} was deleted"
+			flash[:notice] = "Тэг '#{tag.tag_name}' был удалён из всех постов."
 		else
-			flash[:notice] = "ERROR! Tag #{tag.tag_name} was not deleted"
+			flash[:notice] = "Опа! Тэг '#{tag.tag_name}' нельзя удалить. Звони программисту, что-то пошло не так."
 		end
 		redirect_to(tags_path)
 	end

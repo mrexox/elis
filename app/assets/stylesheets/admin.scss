@@ -3,10 +3,16 @@
  *= require slider_items
  *= require tags
  *= require messages
+ *= require notice
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@font-face {
+  font-family: 'Calibril';
+  src: font-url('fonts/calibril.ttf') format('truetype');
+}
 
 .container {
 	margin-top: 60px;

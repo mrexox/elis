@@ -1,15 +1,11 @@
 class AccessController < ApplicationController
-	layout :resolve_layout
+	layout 'admin'
   before_action :check_logged_in, :except => [:login, :attempt_login, :logout]
   def console
     # displays menu and admin console
 		@posts_count = Post.all.count
 		@messages_count = Message.all.count
 		@slider_items_count = SliderItem.all.count
-  end
-
-  def login
-    # displays login form
   end
 
   def attempt_login
@@ -22,27 +18,18 @@ class AccessController < ApplicationController
 
     if authorized_user
       session[:user_id] = authorized_user.id
-      flash.now[:notice] = 'U have loggen in'
+      flash[:notice] = 'Рада видеть тебя, Элина!'
       redirect_to(admin_path)
     else
-      flash.now[:error] = 'Invalid username/password'
-      render('login')
+      flash[:error] = 'Пароль или логин введён неверно'
+      redirect_to(login_path)
     end
   end
 
   def logout
     session[:user_id] = nil
-    flash[:notice] = 'U have logged out'
+    flash[:notice] = 'Приходи ещё!'
     redirect_to(root_path)
   end
 
-	private
-	def resolve_layout
-		case action_name
-		when 'login'
-			'application'
-		else
-			'admin'
-		end
-	end
 end

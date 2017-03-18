@@ -10,10 +10,10 @@ class SliderItemsController < ApplicationController
   def create
     @slider_item = SliderItem.new(slider_item_params)
     if @slider_item.save
-      flash[:notice] = 'Слайдер был пополнен!'
+      flash[:notice] = 'Ура! Был добавлен новый слайд.'
       redirect_to(slider_items_path)
     else
-      flash[:error] = 'Неудачно, что-то не так'
+      flash.now[:notice] = 'Неудачно, какие-то поля введены неверно.'
       render('new')
     end
   end
@@ -24,10 +24,10 @@ class SliderItemsController < ApplicationController
   def update
     @slider_item = SliderItem.find(params[:id])
     if @slider_item.update_attributes(slider_item_params)
-      flash[:notice] = 'Элемент слайдера успешно обновлён.'
+      flash[:notice] = 'Слайд был изменён и загружен.'
       redirect_to(slider_items_path)
     else
-      flash[:error] = 'Неудачно, что-то не так.'
+      flash.now[:notice] = 'Неудачно, какие-то поля введены неверно.'
       render('edit')
     end
   end
@@ -46,7 +46,7 @@ class SliderItemsController < ApplicationController
   def destroy
     @slider_item = SliderItem.find(params[:id])
     @slider_item.destroy
-    flash[:notice] = 'Элемент слайдера удалён.'
+    flash[:notice] = 'Слайд был удалён...'
     redirect_to(slider_items_path)
   end
 

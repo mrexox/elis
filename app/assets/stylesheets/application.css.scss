@@ -13,6 +13,7 @@
  *= require blog
  *= require home
  *= require search
+ *= require notice
  *= require portfolio
  *= require main_page
  *= require message
@@ -20,12 +21,21 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets"
-@import "bootstrap"
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-body
-	a 
-		color: #babacc
-	a:hover 
-		color: black
-		text-decoration: none
+@font-face {
+  font-family: 'Calibril';
+  src: font-url('fonts/calibril.ttf') format('truetype');
+}
+
+
+body {
+	a{ 
+		color: #babacc;
+	}
+	a:hover {
+		color: black;
+		text-decoration: none;
+	}
+}

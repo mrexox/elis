@@ -1,6 +1,7 @@
 # coding: utf-8
 class PostsController < ApplicationController
 	layout 'admin'
+
   before_action :check_logged_in
 
   def new
@@ -10,10 +11,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(parsed_params)
     if @post.save
-      flash[:notice] = "Пост #{@post.name} добавлен"
+      flash[:notice] = "Ура! Новый пост: #{@post.name} "
       redirect_to(posts_path)
     else
-      flash[:notice] = "Пост #{@post.name} не был добавлен"
+      flash.now[:notice] = 'Произошла ошибка. Какие-то поля введены неверно'
       render('new')
     end
 
@@ -36,7 +37,7 @@ class PostsController < ApplicationController
       flash[:notice] = 'Пост успешно обновлён'
       redirect_to(posts_path)
     else
-      flash[:notice] = 'Произошла ошибка. Какие-то поля введены неверно'
+      flash.now[:notice] = 'Произошла ошибка. Какие-то поля введены неверно'
       render('edit')
     end
   end
@@ -47,7 +48,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    flash[:notice] = "Пост '#{@post.name}' был успешно удалён"
+    flash[:notice] = "Пост '#{@post.name}' был удалён"
     redirect_to(posts_path)
   end
   private
@@ -64,7 +65,7 @@ class PostsController < ApplicationController
 			if tag.nil?
 				tag = Tag.new(:tag_name => tag_name)
 				if !tag.save 
-					flash[:notice] = "Не получилось сохранить тэг #{tag_name}"
+					flash[:notice] = "Не получилось сохранить тэг '#{tag_name}'"
 				end
 			end
 			tags << tag

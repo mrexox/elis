@@ -9,7 +9,7 @@
       <th>Телефон</th>
       <th>Электронная почта</th>
       <th>Текст сообщения</th>
-      <th>Actions</th>
+      <th></th>
     </tr>
     <% @messages.each do |message| %>
     <tr>
@@ -20,8 +20,8 @@
       <td><%= message.email %></td>
       <td><%= message.text %></td>
       <td class="actions">
-        <%= link_to('Show', message_path(message), metod: :get, :class => 'action show') %>
-        <%= link_to('Delete', message_path(message), method: :delete, :class => 'action delete') %>
+        <%= link_to('Открыть', message_path(message), metod: :get, :class => 'action show') %>
+        <%= link_to('Удалить', message_path(message), method: :delete, :class => 'action delete') %>
       </td>
     </tr>
     <% end %>

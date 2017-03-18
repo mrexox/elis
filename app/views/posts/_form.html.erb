@@ -1,7 +1,7 @@
 <table>
 	<tr>
 		<th>Название:</th>
-		<td> <%= f.text_field(:name) %> </td>
+		<td> <%= f.text_field(:name, :id => 'name', :onchange => 'generatePermalink()') %> </td>
 	</tr>
 	<tr>
 		<th>Текст:</th>
@@ -13,7 +13,7 @@
 	</tr>
 	<tr>
 		<td>Permalink</td>
-		<td><%= f.text_field(:permalink) %></td>
+		<td><%= f.text_field(:permalink, :id => 'permalink') %></td>
 	</tr>
 	<tr>
 		<td>Tags</td>

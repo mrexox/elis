@@ -2,20 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $white-transparent: rgba(247, 247, 247, 0.05);
-@font-face {
-  font-family: 'Quicksand Bold';
-  src: font-url('fonts/Quicksand-Bold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Quicksand Regular';
-  src: font-url('fonts/Quicksand-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Calibril';
-  src: font-url('fonts/calibril.ttf') format('truetype');
-}
 html, body { height: 100%; }
 #body-content {
   min-height: 150%;
@@ -85,18 +71,6 @@ img#blog-logo {
 }
 
 
-.notice {
-  width: 400px;
-  height: 40px;
-  border-radius: 10px;
-  margin: 0 auto;
-  background-color: #dabd89;
-  color: white;
-  box-shadow: 0 4px 8px;
-  display: flex;
-  justify-content: center; /* align horizontal */
-  align-items: center;
-}
 
 hr.devider {
   border: 0;

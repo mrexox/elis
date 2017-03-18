@@ -33,6 +33,9 @@ class MainPageController < ApplicationController
 	def portfolio
 	end
 
+	def login
+	end
+
 	def search
 		@tag_name = params[:tag]
 		tag = Tag.find_by(:tag_name => @tag_name)
