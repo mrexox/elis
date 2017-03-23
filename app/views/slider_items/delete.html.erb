@@ -1,3 +1,4 @@
+<div class="slider-block">
 <p>Точно удалить слайд <%= @slider_item.text%>?</p>
 <%= form_for(@slider_item, :method => 'delete') do |f| %>
     <%= image_tag(f.object.image_url.to_s)%>
@@ -5,3 +6,4 @@
     <p><%= f.object.text%></p>
     <%= f.submit("Да")%>
 <% end %>
+</div>
