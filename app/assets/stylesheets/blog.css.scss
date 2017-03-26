@@ -26,9 +26,9 @@ $dash-color: #D9DBCE;
 .header {
     font-family: 'Times New Roman';
     font-size: 55px;
-		color:#0d0d0d;
+    color: #0d0d0d;
     font-weight: bold;
-		margin-bottom: 1px;
+    margin-bottom: 1px;
 }
 
 .button {
@@ -80,13 +80,16 @@ $dash-color: #D9DBCE;
 	font-size: 16px;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 767px) {
 	.right-side {
 		margin-top: 40px;
 		margin-left: 0;
 	}
 	.left-side {
 		margin-left: 0;
+	}
+	.header {
+		font-size: 2em;
 	}
 }
 

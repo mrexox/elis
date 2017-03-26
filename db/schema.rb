@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170318093511) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admin_users", force: :cascade do |t|
     t.string   "username"
     t.string   "password_digest"
@@ -20,9 +23,9 @@ ActiveRecord::Schema.define(version: 20170318093511) do
   end
 
   create_table "images", force: :cascade do |t|
+    t.binary   "data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.binary   "data"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -47,7 +50,7 @@ ActiveRecord::Schema.define(version: 20170318093511) do
   create_table "posts_tags", id: false, force: :cascade do |t|
     t.integer "post_id"
     t.integer "tag_id"
-    t.index ["post_id", "tag_id"], name: "index_posts_tags_on_post_id_and_tag_id"
+    t.index ["post_id", "tag_id"], name: "index_posts_tags_on_post_id_and_tag_id", using: :btree
   end
 
   create_table "slider_items", force: :cascade do |t|
