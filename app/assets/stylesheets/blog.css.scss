@@ -80,7 +80,7 @@ $dash-color: #D9DBCE;
 	font-size: 16px;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 767px) {
 	.right-side {
 		margin-top: 40px;
 		margin-left: 0;
@@ -89,7 +89,7 @@ $dash-color: #D9DBCE;
 		margin-left: 0;
 	}
 	.header {
-		font-size: 30px;
+		font-size: 2em;
 	}
 }
 
