@@ -1,196 +1,199 @@
 .slide {}
 @media (max-width: 767px) {
-  .carousel-wrapper {
-    height: 250px;
-  }
-  .carousel-caption {
-    font-size: 30px;
-    top: 50%;
-  }
+    .carousel-wrapper {
+	height: 250px;
+    }
+    .carousel-caption {
+	font-size: 30px;
+	top: 50%;
+    }
+    .pinterest {
+	display: none;
+    }
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
-  .carousel-wrapper {
-    height: 400px;
-  }
-  .carousel-caption {
-    font-size: 45px;
-    top: 58%;
-  }
+    .carousel-wrapper {
+	height: 400px;
+    }
+    .carousel-caption {
+	font-size: 45px;
+	top: 58%;
+    }
 }
 
 @media (min-width: 992px) {
-  .carousel-wrapper {
-    height: 500px;
-  }
-  .carousel-caption {
-    font-size: 58px;
-    top: 58%;
-  }
+    .carousel-wrapper {
+	height: 500px;
+    }
+    .carousel-caption {
+	font-size: 58px;
+	top: 58%;
+    }
 
 }
 .item {
-  text-align: center;
-  height: 100%;
+    text-align: center;
+    height: 100%;
 }
 
 .item img {
-  margin: auto 0;
-  height: 100%;
-  width: 100%;
-}
-.carousel-caption {
-  font-family: 'Calibril';
-  transform: translateY(-50%);
-}
-#myCarousel {
-  .left.carousel-control,
-  .right.carousel-control {
-    background-image: none;
-  }
-  .carousel-inner {
     margin: auto 0;
     height: 100%;
-  }
-  height: 100%;
+    width: 100%;
+}
+.carousel-caption {
+    font-family: 'Calibril';
+    transform: translateY(-50%);
+}
+#myCarousel {
+    .left.carousel-control,
+    .right.carousel-control {
+	background-image: none;
+    }
+    .carousel-inner {
+	margin: auto 0;
+	height: 100%;
+    }
+    height: 100%;
 }
 
 // From Zen
 .posts-brief {
-	margin-bottom: 50px;
-	div.left,
-	div.right {
-		margin: 0 auto;	
-		width: 90%; 
-		margin-top: 30px;
-	}
+    margin-bottom: 50px;
+    div.left,
+    div.right {
+	margin: 0 auto;	
+	width: 90%; 
+	margin-top: 30px;
+    }
 
-@media (min-width: 992px) {
+    @media (min-width: 992px) {
 	div.left,
 	div.right {
-		height: 450px;
+	    height: 450px;
 	}
 	.post-name {
-		font-size: 40px;
+	    font-size: 40px;
 	}
 	.text {padding-left: 30px; padding-right: 30px;}
-}
-@media (max-width: 991px) and (min-width: 768px) {
+    }
+    @media (max-width: 991px) and (min-width: 768px) {
 	div.left,
 	div.right {
-		height: 400px;
+	    height: 400px;
 	}
 	.post-name {
-		font-size: 35px;
+	    font-size: 35px;
 	}
 	.text {padding-left: 20px; padding-right: 20px;}
-}
-@media (max-width: 767px) {
+    }
+    @media (max-width: 767px) {
 	div.left,
 	div.right {
-		height: 200px;
+	    height: 200px;
 	}
 	.post-name {
-		font-size: 25px;
+	    font-size: 25px;
 	}
 	.text {padding-left: 10px; padding-right: 10px;}
-}
-	.image {
-			height: 100%;
-			width: 50%;
-			vertical-align: top;
-		img {
-				margin: 0 auto;		
-				display: block;
-				max-height: 100%;
-				max-width: 100%;
-		}
+    }
+    .image {
+	height: 100%;
+	width: 50%;
+	vertical-align: top;
+	img {
+	    margin: 0 auto;		
+	    display: block;
+	    max-height: 100%;
+	    max-width: 100%;
 	}
-	.post-name {
-		font-family: 'Times New Roman', Times, serif;
-		color:#0d0d0d;
-		font-weight: bold;
+    }
+    .post-name {
+	font-family: 'Times New Roman', Times, serif;
+	color:#0d0d0d;
+	font-weight: bold;
+    }
+    .text {
+	font-family: 'Calibril', Times, serif;
+	color:black;
+	position: relative;
+	word-wrap: break-word;
+	max-height: 100%;
+	max-width: 50%;
+    }
+    .left {
+	.image {	float: left; }
+	.text { 
+	    float: left;
+	    text-align: left;
 	}
-	.text {
-		font-family: 'Calibril', Times, serif;
-    color:black;
-		position: relative;
-		word-wrap: break-word;
-		max-height: 100%;
-		max-width: 50%;
-	}
-	.left {
-		.image {	float: left; }
-		.text { 
-			float: left;
-			text-align: left;
-		}
-		.button { float: left; }
-	}
+	.button { float: left; }
+    }
 
-	.right {
-		.image {	float: right;	}
-		.text { 
-			float: right;
-			text-align: right;
-		}
-		.button { float: right; }
+    .right {
+	.image {	float: right;	}
+	.text { 
+	    float: right;
+	    text-align: right;
 	}
+	.button { float: right; }
+    }
 }
 // ===
-	.hr-text {
-		font-family: 'Times New Roman';
-		font-size: 60px;
-		font-weight: bold;
-		line-height: 1em;
-		position: relative;
-		outline: 0;
-		border: 0;
-		color: black;
-		text-align: center;
-		height: 1.5em;
-		//opacity: .5;
-		&:before {
-			content: '';
-			// use the linear-gradient for the fading effect
-			// use a solid background color for a solid bar
-			background: linear-gradient(to right, transparent, black, transparent);//#818078,
-			position: absolute;
-			left: 0;
-			top: 50%;
-			width: 100%;
-			height: 1px;
-		}
-		&:after {
-			content: attr(data-content);
-			position: relative;
-			display: inline-block;
-			color: black;
+.hr-text {
+    font-family: 'Times New Roman';
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+    //opacity: .5;
+    &:before {
+	content: '';
+	// use the linear-gradient for the fading effect
+	// use a solid background color for a solid bar
+	background: linear-gradient(to right, transparent, black, transparent);//#818078,
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 1px;
+    }
+    &:after {
+	content: attr(data-content);
+	position: relative;
+	display: inline-block;
+	color: black;
 	
-			padding: 0 .5em;
-			line-height: 1.5em;
-			// this is really the only tricky part, you need to specify the background color of the container element...
-			color: black; //#818078;
-			background-color: white; //#fcfcfa;
-		}
-	
-	
-	}
+	padding: 0 .5em;
+	line-height: 1.5em;
+	// this is really the only tricky part, you need to specify the background color of the container element...
+	color: black; //#818078;
+	background-color: white; //#fcfcfa;
+    }
+    
+    
+}
 .youtube {
-	text-align: center;
-	@media (max-width: 767px) {
-		.video {
-			max-width: 100%;
-			height: 250px;
-		}	
-	}
-	@media (min-width: 768px) {
+    text-align: center;
+    @media (max-width: 767px) {
+	.video {
+	    max-width: 100%;
+	    height: 250px;
+	}	
+    }
+    @media (min-width: 768px) {
 
-		.video {
-			margin: 0 auto;
-			max-width: 800px;
-			height: 600px;
-		}	
-	}
+	.video {
+	    margin: 0 auto;
+	    max-width: 800px;
+	    height: 600px;
+	}	
+    }
 }
 
