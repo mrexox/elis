@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post 'access/attempt_login'
   get 'access/logout'
   get 'blog/:permalink', :to => 'main_page#show_post', :as => 'show_post'
+	post 'blog/:permalink/like', :to => 'main_page#like', :as => 'like_post'
 
 	get 'login', to: 'main_page#login'
   get 'blog', to: 'main_page#blog'

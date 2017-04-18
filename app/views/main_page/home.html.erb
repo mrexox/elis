@@ -58,13 +58,13 @@
 	</div>
 	<div class="text">
 	    <span class="post-name"><%= post.name %></span>
-	    <span ><%= simple_format(post.text.truncate_words(9))%> </span>
+	    <span ><%= simple_format(post.text.truncate_words(9).squish)%> </span>
 	    <%= link_to('Read more', show_post_path(post.permalink), :class => 'button') %>
 	</div>
 		</div>
     <% end %>
     <div class="pinterest" style="text-align:center; margin: 0 auto;">
-	<a data-pin-do="embedUser" data-pin-lang="ru" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://ru.pinterest.com/elistypedesign/"></a>
+	<a data-pin-do="embedUser" data-pin-lang="ru" data-pin-board-width="2000" data-pin-scale-height="80" data-pin-scale-width="900" href="https://ru.pinterest.com/elistypedesign/"></a>
     </div>
 	    </div>
 

@@ -15,3 +15,18 @@
 //= require jquery
 //= require turbolinks
 //= require bootstrap-sprockets
+
+function notify(timeSec, message)
+{
+    var notification = document.getElementsByClassName('notice')[0];
+    if (timeSec === undefined || isNaN(timeSec)) {
+			timeSec = 3;
+    }
+		if (message !== undefined) {
+			notification.textContent = message;
+		}
+		$(notification).fadeIn();
+    setTimeout(function(){
+			$(notification).fadeOut();
+    }, timeSec * 1000);
+}

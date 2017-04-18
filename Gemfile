@@ -7,6 +7,7 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
+gem 'pg'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
@@ -17,7 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'carrierwave'
-
+gem 'active_link_to'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -30,7 +31,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
   gem 'passenger'
 end
 

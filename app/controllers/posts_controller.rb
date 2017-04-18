@@ -33,6 +33,9 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+		puts "-==================-\n"
+		puts parsed_params.to_s, parsed_params[:images].to_s
+		puts "-==================-\n"
     if @post.update_attributes(parsed_params)
       flash[:notice] = 'Пост успешно обновлён'
       redirect_to(posts_path)

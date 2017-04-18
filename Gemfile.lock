@@ -24,6 +24,9 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_link_to (1.0.4)
+      actionpack
+      addressable
     activejob (5.0.1)
       activesupport (= 5.0.1)
       globalid (>= 0.3.6)
@@ -38,6 +41,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.1)
+      public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
     autoprefixer-rails (6.7.2)
       execjs
@@ -85,6 +90,8 @@ GEM
       rack
       rake (>= 0.8.1)
     pg (0.20.0)
+    pg (0.20.0-x86-mingw32)
+    public_suffix (2.0.5)
     puma (3.8.2)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -155,6 +162,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  active_link_to
   autoprefixer-rails
   bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.2.0)

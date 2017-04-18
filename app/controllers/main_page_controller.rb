@@ -15,10 +15,25 @@ class MainPageController < ApplicationController
     @current_page = page + 1
   end
 
+
   def show_post
     @post = Post.where(:permalink => params[:permalink]).first
 		@tags = Tag.sorted
   end
+
+	def like
+		@post = Post.where(:permalink => params[:permalink]).first
+		if @post.likes.map { |l| l.user_ip }.include? request.remote_ip
+			render json: {:message => 'You have already liked this post!'}, status: 423 
+		else
+			@post.likes.build( :user_ip => request.remote_ip)
+			if @post.save
+				render json: {}, status: 202
+			else
+				render json: @post.errors, status: 404
+			end
+		end
+	end
 
   def shop
   end

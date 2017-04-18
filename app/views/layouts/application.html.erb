@@ -11,6 +11,9 @@
 </head>
 
 <body>
+      <div class="notice" style="display: none;">
+		        <%= flash[:notice] %>
+      </div>
   <div id="body-content">
     <img src="/logo.png" id="logo" alt="Logo">
     <div class="container hat">
@@ -31,9 +34,9 @@
     </div>
     <hr class="devider">
       <% if !flash[:notice].blank? %>
-      <div class="notice">
-        <%= flash[:notice] %>
-      </div>
+				<script>
+				notify();
+				</script>
       <% end %>
     <%= yield %>
   </div>

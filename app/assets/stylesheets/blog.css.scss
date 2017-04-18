@@ -144,11 +144,25 @@ $dash-color: #D9DBCE;
 	text-align: center;
   color: #babacc;
 }
-.tags {
+.post-footer {
 	display: block;
-	border-radius: 5px;
-	padding: 3px;
 	margin-top: 30px;
+}
+.tags {
+	float: right;
+	display: inline-block;
+	padding: 3px;
 	text-align: right;
 	color: #babacc;
+}
+
+.likes {
+	float: left;
+	display: inline-block;
+	width: 40px;
+	height: 30px;
+	background-color: #debdac;
+}
+.likes:hover {
+	background-color: #debdbc;
 }
