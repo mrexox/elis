@@ -5,7 +5,10 @@
 	</tr>
 	<tr>
 		<th>Текст:</th>
-		<td> <%= raw f.text_area(:text, size: '60x20') %></td>
+		<td> 
+			<%= f.hidden_field(:text) %>
+			<div id="editor"><%= raw f.object.text %></div>	
+		</td>
 	</tr>
 	<tr>
 		<td>Изображения:</td>
@@ -20,3 +23,16 @@
 		<td><%= f.text_field(:tags, :value => f.object.tags.collect{ |tag| tag.tag_name }.join(', ') ) %>
 </tr>
 </table>
+
+<script src="https://cdn.quilljs.com/1.2.4/quill.js"></script>
+<script>
+var quill = new Quill('#editor', {
+	theme: 'snow'
+});
+var form = document.querySelector('form');
+form.onsubmit = function() {
+	// Populate hidden form on submit
+	var text = document.querySelector('input#post_text');
+	text.value = quill.root.innerHTML;
+};
+</script>

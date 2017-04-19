@@ -5,8 +5,8 @@
   <%= csrf_meta_tags %>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
-</head>
+	<link href="https://cdn.quilljs.com/1.2.4/quill.snow.css" rel="stylesheet">
+  <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %> </head>
 
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -56,4 +56,6 @@
 
     <%= yield %>
 	</div>
+
+	<script src="https://cdn.quilljs.com/1.2.4/quill.js"></script>
 </body>

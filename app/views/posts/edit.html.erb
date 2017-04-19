@@ -1,7 +1,7 @@
 <div class="post edit">
     <h1>Edit Post <%= @post.id %></h1>
     <%= form_for( @post ) do |f| %>
-	<%= render(:partial => 'edit_form', :locals => {:f => f}) %>
+	<%= render(:partial => 'form', :locals => {:f => f}) %>
 	<div class="button-submit">
 	    <%= f.submit("Update Post") %>
 	</div>
