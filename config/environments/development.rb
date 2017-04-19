@@ -32,9 +32,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'mrexox.com',
+    domain:               'elistype.ru',
     user_name:            'iandarroy@gmail.com',
-    password:             'G00gl3N3Vla5t3nNad0Mn0y',
+    password:             Rails.application.secrets.google_pass,
     authentication:       'plain',
     enable_starttls_auto: true  }
 
