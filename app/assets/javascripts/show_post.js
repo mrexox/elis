@@ -21,4 +21,11 @@ $(document).ready(function() {
 			}
 		});
 	});
+	$('#like').on('click', wasLiked);
 });
+
+function wasLiked() {
+	var like = document.getElementById('like');
+	like.classList.remove('likes');
+	like.classList.add('liked');
+}

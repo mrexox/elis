@@ -16,7 +16,7 @@
 				<div class="tags">
 					<%= raw @post.tags.collect{ |tag| link_to(tag.tag_name, search_path(:tag => tag.tag_name)) }.join(', ') %>
 				</div>
-				<div class='likes btn'><%= @post.likes.size %></div>
+				<div id="like" class="<%= @liked ? "liked" : "likes" %>"><%= @post.likes.size %></div>
 			</div>
 			</div>
     </div>

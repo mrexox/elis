@@ -157,12 +157,27 @@ $dash-color: #D9DBCE;
 }
 
 .likes {
-	float: left;
-	display: inline-block;
-	width: 40px;
-	height: 30px;
-	background-color: #debdac;
+	width: 50px;
+	height: 50px;
+	padding: 15px;
+	cursor: pointer;
+	text-align: center;
+	background-size: 50px 50px;
+	background-image: url("/icons/like.png");
+	margin: 0 auto;
+}
+.liked {
+	margin: 0 auto;
+	width: 50px;
+	height: 50px;
+	padding: 15px;
+	cursor: pointer;
+	text-align: center;
+	background-size: 50px 50px;
+	color: white;
+	background-image: url("/icons/liked.png");
 }
 .likes:hover {
-	background-color: #debdbc;
+	color: white;
+	background-image: url("/icons/liked.png");
 }

@@ -3,9 +3,7 @@
   <h1>Create New Post</h1>
   <%= form_for( @post ) do |f| %>
   <%= render(:partial => 'form', :locals => {:f => f}) %>
-  <div class="button-submit">
-    <%= f.submit("Create Post") %>
-  </div>
+	<%= f.submit("Create Post", :class => 'btn btn-primary') %>
 
   <% end %>
 </div>

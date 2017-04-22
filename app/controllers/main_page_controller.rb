@@ -18,13 +18,14 @@ class MainPageController < ApplicationController
 
   def show_post
     @post = Post.where(:permalink => params[:permalink]).first
+		@liked = @post.likes.map { |l| l.user_ip }.include? request.remote_ip
 		@tags = Tag.sorted
   end
 
 	def like
 		@post = Post.where(:permalink => params[:permalink]).first
 		if @post.likes.map { |l| l.user_ip }.include? request.remote_ip
-			render json: {:message => 'You have already liked this post!'}, status: 423 
+			render json: {:message => 'Вы уже добавили лайк!'}, status: 423 
 		else
 			@post.likes.build( :user_ip => request.remote_ip)
 			if @post.save

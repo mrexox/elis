@@ -5,13 +5,13 @@
     <% @posts.each do |post| %>
 	<div class="post-block">
 	    <h2><%=link_to(post.name, post_path(post))%></h2>
-			<p><%= link_to('Edit', edit_post_path(post))%>
-			<%= link_to('Delete', delete_post_path(post))%>
-			<%= link_to('Show', show_post_path(post.permalink))%></p>
 			<% if !post.images.empty? %>
 				<%= image_tag(post.images.first.url.to_s, :class => 'post-image') %>
 			<% end %>	
 	    <p><%=raw(post.text)%></p>
+			<p><%= link_to('Edit', edit_post_path(post), :class => 'btn btn-warning btn-xs')%>
+		<%= link_to('Delete', delete_post_path(post), :class => 'btn btn-danger btn-xs')%>
+		<%= link_to('Show', show_post_path(post.permalink), :class => 'btn btn-info btn-xs')%></p>
 	</div>
     <% end %>
 		<%= button_to('Новый пост', new_post_path, :method => :get) %>
